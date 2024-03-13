@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function myFunction() {
+          // Get the value of the input field with id="numb"
+          var x = document.getElementById("password").value;
+          document.getElementById("passwordError").innerText = "";
+          if (x=="251689") 
+          {
+            window.location.href="riddle.html";
+          } 
+          else 
+          {
+            document.getElementById("passwordError").innerText="opps! invalid passcode."; 
+          }
+        }
+    </script>
+</head>
+<body style="background-image: url(th25.jpg);">
+    <div class="login-container">
+        <h1 style="font-family:verdana;">TREASURE HUNT</h1>
+        <div class="form-group">
+                <label for="password">Passcode:</label>
+                <input type="number" id="password" name="password" required>
+                <div id="passwordError" style="color: red;"></div>
+  
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="myFunction()">Let's go </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
